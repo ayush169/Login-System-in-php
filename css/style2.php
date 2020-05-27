@@ -23,7 +23,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: red;
   height: 250px;
 }
 
@@ -156,6 +155,13 @@ main {
 
 .nav {
   display: inline-flex;
+}
+input[type="file"]{
+  color: transparent;
+  position:relative;
+  left:125px;
+  top:-20px;
+
 }
 
 .nav li {
