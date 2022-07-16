@@ -4,7 +4,7 @@ $error = false;
 $showError = "";
 // echo $_SERVER["REQUEST_METHOD"];
 if($_SERVER["REQUEST_METHOD"] = "POST"){
-	if(isset($_POST['username']) && isset($_POST['password'])){
+	if(isset($_POST['submitBtn'])){
 		include "_dbconnect.php";
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -23,16 +23,16 @@ if($_SERVER["REQUEST_METHOD"] = "POST"){
 					header("location: welcome.php");
 				}
 				else{
-					$showError = "password do not match";
+                    $showError = "password do not match";
 					$error = true;
 				}
 			}
 		}
 		else{
-			$showError = "invalid username or password";
+            $showError = "invalid username or password";
 			$error = true;
 		}
-	
+        
     }
 }
 ?>
@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] = "POST"){
                     </div>
                 </div>
                 <a>Forgot Password?</a>
-                <button class="btn" type="submit">Login</button>
+                <button class="btn" type="submit" name = "submitBtn">Login</button>
                 <a href="signup.php" class="btn" id="signup">Create an account</a>
             </form>
         </div>

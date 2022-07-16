@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$sql1 = "INSERT INTO `image` (`name`, `username`, `pic`, `date`) VALUES ('$name', '$username', 'img/avatar.svg', current_timestamp());";
 			$result1 = mysqli_query($conn,$sql1);
 			$showAlert = true;
-			// header("location: welcome.php");
+			header("location: signup.php");
         }
         else{
             $error = true;
